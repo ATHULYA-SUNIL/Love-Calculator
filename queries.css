@@ -1,0 +1,11 @@
+@media (max-width: 425px){
+    .input{
+        display: block;
+    }
+    body{
+        background-color: aquamarine;
+    }
+    title{
+        font-size: xx-large;
+    }
+}

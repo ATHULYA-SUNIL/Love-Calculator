@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+</head>
+<body>
+    <center>
+        <h1>Love 🤍 Calculator</h1>
+        <p>Get Your Own Love Result instantly*</p>
+        <div class="values">
+            <div class="insert">
+                <label>*Your Name</label>
+                <input type="text" class="name" id="name1" placeholder="Enter Your Name">
+            </div>
+            <div class="insert">
+                <label>*His/Her Name</label>
+                <input type="text" class="name" id="name2" placeholder="Enter His/Her Name">
+            </div>
+        </div>
+        <input type="button" class="btn" onclick="store()" value="❤️ CALCULATE ❤️">
+
+        <h2>Result</h2>
+    </center>
+    <script>
+        function store(){
+            var str1=document.getElementById("name1").value;
+            var str2=document.getElementById("name2").value;
+            var random=Math.random();
+            random=Math.floor(random*100)+1;
+
+            var firstName1=(str1.slice(0,1)).toUpperCase();
+            var restName1=(str1.slice(1,str1.length)).toLowerCase();
+            var nameFirst=firstName1+restName1;
+
+            var firstName2=(str2.slice(0,1)).toUpperCase();
+            var restName2=(str2.slice(1,str2.length)).toLowerCase();
+            var nameSecond=firstName2+restName2;
+
+            //document.querySelector("h2").innerHTML="nameFirst random% 🤍 nameSecond";
+            document.querySelector("h2").innerHTML=nameFirst+' '+random+'% 🤍 '+nameSecond;
+
+        }
+    </script>
+</body>
+</html>
